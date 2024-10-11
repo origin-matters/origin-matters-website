@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origin Matters</title>
     <style>
-        body, html {
-            height: 100%;
+        body {
             margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000000;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
         }
         .logo-container {
-            width: 600px;
-            height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 390px;
+            height: 390px;
+            animation: rotate 20s linear infinite;
         }
         .logo-container img {
             width: 100%;
             height: 100%;
-            animation: spin 30s linear infinite; /* Add this line */
         }
-        @keyframes spin { /* Add this keyframes rule */
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(-360deg);
-            }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .teletype-container {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #0099ff; /* Space Odyssey blue */
+            font-family: monospace;
+            font-size: 24px;
+            text-shadow: 0 0 5px #0099ff; /* Add a subtle glow effect */
+            z-index: 1000; /* Ensure it's on top */
         }
     </style>
 </head>
@@ -39,5 +46,61 @@
     <div class="logo-container">
         <img src="logo.svg" alt="Origin Matters Logo">
     </div>
+    <div class="teletype-container" id="teletype"></div>
+
+    <script>
+        const lines = [
+            "Welcome to the Origin platform,",
+            "answering questions like",
+            "",
+            "Who is involved in the manufacture of your garments?",
+            "Who designed the components of your critical infrastructure?",
+            "How are you tracking the Pharma IP you share with the industry?",
+        ];
+        const teletype = document.getElementById('teletype');
+        let lineIndex = 0;
+        let charIndex = 0;
+
+        // Create audio context
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSonarBleep() {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // 440 Hz
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.01);
+            gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.1);
+
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.1);
+        }
+
+        function typeText() {
+            if (lineIndex < lines.length) {
+                if (charIndex < lines[lineIndex].length) {
+                    teletype.innerHTML += lines[lineIndex].charAt(charIndex);
+                    charIndex++;
+                    playSonarBleep();
+                    setTimeout(typeText, 100);
+                } else {
+                    teletype.innerHTML += '<br>';
+                    lineIndex++;
+                    charIndex = 0;
+                    setTimeout(typeText, 1000); // Pause for 1 second between lines
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+            typeText();
+        });
+    </script>
 </body>
 </html>
