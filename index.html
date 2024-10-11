@@ -12,7 +12,6 @@
             justify-content: center;
             align-items: center;
             background-color: #000000;
-            overflow: hidden;
         }
         .logo-container {
             width: 600px;
@@ -24,37 +23,15 @@
         .logo-container img {
             width: 100%;
             height: 100%;
-            animation: spin 30s linear infinite;
+            animation: spin 30s linear infinite; /* Add this line */
         }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
-        }
-        .child-labour-image, .chipspy-image, .ip-image, .evidence-image {
-            position: fixed;
-            width: 1%;
-            height: auto;
-            z-index: 1000;
-        }
-        .child-labour-image { top: 20px; right: 20px; }
-        .chipspy-image { bottom: 20px; left: 20px; }
-        .ip-image { bottom: 20px; right: 20px; }
-        .evidence-image { top: 20px; left: 20px; }
-        @keyframes grow-shrink-top-right {
-            0%, 100% { width: 1%; top: 20px; right: 20px; }
-            50% { width: 100%; top: 0; right: 0; }
-        }
-        @keyframes grow-shrink-bottom-left {
-            0%, 100% { width: 1%; bottom: 20px; left: 20px; }
-            50% { width: 100%; bottom: 0; left: 0; }
-        }
-        @keyframes grow-shrink-bottom-right {
-            0%, 100% { width: 1%; bottom: 20px; right: 20px; }
-            50% { width: 100%; bottom: 0; right: 0; }
-        }
-        @keyframes grow-shrink-top-left {
-            0%, 100% { width: 1%; top: 20px; left: 20px; }
-            50% { width: 100%; top: 0; left: 0; }
+        @keyframes spin { /* Add this keyframes rule */
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
         }
     </style>
 </head>
@@ -62,37 +39,5 @@
     <div class="logo-container">
         <img src="logo.svg" alt="Origin Matters Logo">
     </div>
-    <img src="child-labour.jpg" alt="Child Labour" class="child-labour-image">
-    <img src="chipspy.jpg" alt="Chip Spy" class="chipspy-image">
-    <img src="ip.jpg" alt="IP" class="ip-image">
-    <img src="evidence.jpg" alt="Evidence" class="evidence-image">
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const childLabourImage = document.querySelector('.child-labour-image');
-            const chipspyImage = document.querySelector('.chipspy-image');
-            const ipImage = document.querySelector('.ip-image');
-            const evidenceImage = document.querySelector('.evidence-image');
-
-            const animateSequence = [
-                { element: childLabourImage, animation: 'grow-shrink-top-right 30s ease-in-out forwards' },
-                { element: chipspyImage, animation: 'grow-shrink-bottom-left 30s ease-in-out forwards' },
-                { element: ipImage, animation: 'grow-shrink-bottom-right 30s ease-in-out forwards' },
-                { element: evidenceImage, animation: 'grow-shrink-top-left 30s ease-in-out forwards' }
-            ];
-
-            function startNextAnimation(index) {
-                if (index < animateSequence.length) {
-                    const { element, animation } = animateSequence[index];
-                    element.style.animation = animation;
-                    element.addEventListener('animationend', () => {
-                        setTimeout(() => startNextAnimation(index + 1), 1000);
-                    }, { once: true });
-                }
-            }
-
-            startNextAnimation(0);
-        });
-    </script>
 </body>
 </html>
