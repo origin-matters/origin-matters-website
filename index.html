@@ -1,107 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origin Matters</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background-color: black;
-            overflow: hidden;
-            position: relative;
-        }
-        .logo-container {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 390px;
-        height: 390px;
-    }
-    .logo-container img {
-        width: 100%;
-        height: 100%;
-        animation: rotate 20s linear infinite;
-    }
-    @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-        .teletype-container {
-            position: fixed;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #0099ff; /* Space Odyssey blue */
-            font-family: monospace;
-            font-size: 24px;
-            text-shadow: 0 0 5px #0099ff; /* Add a subtle glow effect */
-            z-index: 1000; /* Ensure it's on top */
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>Origin Matters </title>
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Teko:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/owl.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/linoor-icons-2.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet">
+    <link href="css/custom-animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jarallax.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- rtl css -->
+    <link href="css/rtl.css" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Color css -->
+    <link rel="stylesheet" id="jssDefault" href="css/colors/color-default.css">
+
+    <link rel="shortcut icon" href="images/favicon.png" id="fav-shortcut" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" id="fav-icon" type="image/x-icon">
+
+    <!-- Responsive Settings -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
+
 <body>
-    <div class="logo-container">
-        <img src="logo.svg" alt="Origin Matters Logo">
+
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="icon"></div>
+        </div>
+
+        <!-- Main Header -->
+        <header class="main-header header-style-two">
+
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="inner-container clearfix">
+                    <!--Logo-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html" title="Origin Matters"><img
+                                    src="images/om-large-invert.png" class="main-logo"
+                                    alt="Origin Matters"
+                                    title="Origin Matters"><img src="images/om-large.png"
+                                    id="thm-logo" alt="Origin Matters"
+                                    title="Origin Matters" class="stricked-logo"></a></div>
+                    </div>
+                    <div class="nav-outer clearfix">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-2"></span><span
+                                class="txt">Menu</span></div>
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix one-page-scroll-menu">
+                                    <li class="dropdown megamenu megamenu-clickable megamenu-clickable--toggler">
+                                       <a>Home</a>
+                                    </li>
+                                    <li class="scrollToLink">
+                                        <a href="#services">Services</a>
+                                    </li>
+                                    <li class="scrollToLink">
+                                        <a href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+
+        </header>
+
+
+        
+
+        <section class="logo-intro-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-md-12 text-center">
+                        <div class="main-logo-box" style="margin-bottom: 5px !important;">
+                            <img src="images/om-large-invert.png" alt="Origin Matters" class="large-centered-logo">
+                        </div>
+                        <div class="intro-text" style="margin-top: -100px !important; max-width: 900px; margin: 0 auto; text-align: center;">
+                            <p class="lead" style="line-height: 1.4; margin-bottom: 40px; color: white; font-family: Jura-Regular;">
+                                Data will drive the new economy, but in the way the old economy grew because people trusted institutions like banks, the new digital economy will grow <i style="font-size: 1.2em; font-family: 'Jura', sans-serif; color: #00C3EF;"> only </i> if we <strong style="font-family: 'Jura', sans-serif; font-weight: bold; font-size: 1.2em; color: #00C3EF;">  trust</strong> data.
+                            </p>                            
+                            <p class="lead" style="line-height: 1.4; margin-bottom: 40px; color: white; font-family: Jura-Regular;">Data is most valuable when it’s used and shared, but that’s also when it’s most vulnerable..</p>
+                            
+                            <p class="lead" style="line-height: 1.4; margin-bottom: 40px; color: white; font-family: Jura-Regular;">Existing solutions provide some security, but do not have an immutable audit.</p>
+        
+                            <p class="lead" style="line-height: 1.4; margin-bottom: 40px; color: white; font-family: Jura-Regular;"> <span style="color: #00C3EF; font-family: 'Jura', sans-serif; font-size: 1.2em;"> ORIGIN </span>The first platform to provide absolute audit of data use, increasing value of data through provenance and transparency </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Services Section-->
+<!--Services Section-->
+<section class="services-section-three" id="services" style="background-color: #222429;">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <h3 style="color: white; font-family: Jura-Bold">What we're offering. </h3>
+        </div>
+        <div class="services">
+            <!-- Add justify-content-center to center the row -->
+            <div class="row clearfix justify-content-center">
+                <!--Service Block-->
+                <div class="service-block-two col-xl-5 col-lg-6 col-md-6 col-sm-12 ">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms" style="background-color: #222429;">
+                        <div class="bottom-curve"></div>
+                        <div class="icon-box"><span class="flaticon-monitor"></span></div>
+                        <h4 ><a href="#" style="font-family: Jura-Regular; color: white;"> OriginShare  <br> Next-Generation File Sharing</a></h4>
+                        <div class="text" style="color: white; font-family: Jura-Regular;">First filesystem secured by blockchain for when you want to share high-value data.</div>
+                        <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
+                    </div>
+                </div>
+
+                <!--Service Block-->
+                <div class="service-block-two col-xl-5 col-lg-6 col-md-6 col-sm-12" >
+                    <div class="inner-box wow fadeInUp"  data-wow-delay="600ms" data-wow-duration="1500ms" style="background-color: #222429;">
+                        <div class="bottom-curve"></div>
+                        <div class="icon-box"><span class="flaticon-instant-camera"></span></div>
+                        <h4> <a style="font-family: Jura-Regular; color: white;">OriginVault<br> The Ultimate Virtual Data Room </a></h5>
+                        <div class="text" style="color: white; font-family: Jura-Regular;">Rigorous access control and accountability underpinned by immutable audits, boosting confidence, transparency and the value of your data</div>
+                        <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="teletype-container" id="teletype"></div>
+</section>
 
-    <script>
-        const lines = [
-            "Welcome to the Origin platform helping answer",
-            "",
-            "Who is involved in the manufacture of your garments?",
-            "How do you track the use of the Pharma IP you licence?",
-            "Who designed the components of your critical infrastructure?",
-        ];
-        const teletype = document.getElementById('teletype');
-        let lineIndex = 0;
-        let charIndex = 0;
+        <!--Features Section-->
 
-        // Create audio context
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-        function playSonarBleep() {
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
+       
 
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // 440 Hz
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
+        <section class="features-section-two"></section>
+            <div class="auto-container">
+                <div class="sec-title centered" >
+                    <h3 style="font-family: Jura-Bold; color: white;">Why partner with Origin Matters?</h3>
+                </div>
+                <div class="content-container" >
+                    <div class="row clearfix justify-content-center">
+                        <!--Left Column-->
+                        <div class="left-col col-lg-5 col-md-12 col-sm-12">
+                            <div class="inner">
+                                <div class="features" >
+                                    <div class="feature">
+                                        <div class="count" style="width: 50px; height: 50px; border-radius: 50%; background: #00C3EF; display: flex; align-items: center; justify-content: center;"><span style=" font-family: Jura-Regular; color: #000; font-size: larger;">01</span></div>
+                                        <h5 style="color: white; font-family: Jura-Bold; margin-top: 10px; margin-bottom: 5px;">Valuable Information </h5>
+                                        <div class="sub-text" style="color: white; font-family: Jura-Regular; margin-bottom: 40px;">You have highly valuable information to share and protect.
+                                            </div>
+                                    </div>
+                                    <div class="feature">
+                                        <div class="count" style="width: 50px; height: 50px; border-radius: 50%; background: #00C3EF; display: flex; align-items: center; justify-content: center;"><span style=" font-family: Jura-Regular; color: #000; font-size: larger;">02</span></div>
+                                        <h5 style="font-family: Jura-Bold; color: white; margin-top: 10px;margin-bottom: 5px;">Regulation</h5>
+                                        <div class="sub-text" style="color: white; font-family: Jura-Regular; margin-bottom: 40px;"> You're in a regulated environment and want to prove how you secure and use data
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <div class="count" style="width: 50px; height: 50px; border-radius: 50%; background: #00C3EF; display: flex; align-items: center; justify-content: center;"><span style=" font-family: Jura-Regular; color: #000; font-size: larger;">03</span></div>
+                                        <h5 style="color: white; font-family: Jura-Bold; margin-top: 10px; margin-bottom: 5px;">Afraid of misplaced Data </h5>
+                                        <div class="sub-text" style="color: white; font-family: Jura-Regular; margin-bottom: 40px;"> You’re afraid of revenue or repetitional loss from misplaced data
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-            gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.01);
-            gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.1);
 
-            oscillator.start();
-            oscillator.stop(audioContext.currentTime + 0.1);
-        }
 
-        function typeText() {
-            if (lineIndex < lines.length) {
-                if (charIndex < lines[lineIndex].length) {
-                    teletype.innerHTML += lines[lineIndex].charAt(charIndex);
-                    charIndex++;
-                    playSonarBleep();
-                    setTimeout(typeText, 100);
-                } else {
-                    teletype.innerHTML += '<br>';
-                    lineIndex++;
-                    charIndex = 0;
-                    setTimeout(typeText, 1000); // Pause for 1 second between lines
-                }
-            }
-        }
+        <!--Get Quote Section-->
+        <section class="get-quote-two" id="contact">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!--Left Column-->
+                    <div class="left-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h2 style="font-family: Jura-Bold;"> Contact US. </h2>
+                            </div>
+                            <div class="info">
+                                <ul>
 
-        document.addEventListener('DOMContentLoaded', (event) => {
-            console.log('DOM fully loaded and parsed');
-            typeText();
-        });
+                                    <li style="margin-top: 80px;">
+                                        <span class="icon flaticon-email-2"></span>
+                                        <strong>Email address</strong>
+                                        <a href="mailto:info@originmatters.co">info@originmatters.co</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Right Column-->
+                    <div class="right-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="form-box">
+                                <div class="default-form">
+                                    <form method="post" action="sendemail.php" id="contact-form">
+                                        <div class="row clearfix">
+                                            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="text" name="username" value="" placeholder="Your Name"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="email" name="email" value=""
+                                                        placeholder="Email Address" required="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="text" name="phone" value="" placeholder="Phone Number"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                <div class="field-inner">
+                                                    <input type="text" name="subject" value="" placeholder="Subject"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                <div class="field-inner">
+                                                    <textarea name="message" placeholder="Write Message"
+                                                        required=""></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
+                                                <button class="theme-btn btn-style-one">
+                                                    <i class="btn-curve"></i>
+                                                    <span class="btn-title">Send message</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer normal-padding">
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="inner clearfix">
+                        <div class="copyright">&copy; Copyright 2025 by Origin Matters </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/knob.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/jarallax.min.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jQuery.style.switcher.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js">
     </script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/custom-script.js"></script>
+
+
+    <script src="js/lang.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="js/color-switcher.js"></script>
+
 </body>
+
 </html>
