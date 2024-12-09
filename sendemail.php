@@ -35,7 +35,7 @@ try {
     $mail->Port       = getenv('SMTP_PORT');
     
     $mail->setFrom('rameez.bhat@lockular.in', 'Origin Matters');
-    $mail->addAddress(getenv('RECEIVER'));
+    $mail->addAddress("nick.evans@originmatters.co");
     $mail->isHTML(true);
     
     // Use the captured form data in the email
