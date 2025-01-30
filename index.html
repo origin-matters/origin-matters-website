@@ -37,30 +37,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <style>
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    .alert-danger {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+
+    .error {
+        color: #721c24;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    input.error {
+        border-color: #dc3545;
+    }
+
+    input[name="phone"].error {
+        border-color: initial;
+    }
+
+    input[name="phone"] + .error {
+        display: none;
+    }
+
+    /* Remove all validation styling from optional fields */
+    .optional-field {
+        border-color: initial !important;
+    }
+
+    .optional-field.error {
+        border-color: initial !important;
+    }
+
+    .optional-field + .error {
+        display: none !important;
+    }
+    </style>
 </head>
 
 <body>
 
     <div class="page-wrapper">
         <!-- Preloader -->
-        <div class="preloader">
+    <!--     <div class="preloader">
             <div class="icon"></div>
-        </div>
+        </div> -->
 
         <!-- Main Header -->
         <header class="main-header header-style-two">
 
             <!-- Header Upper -->
             <div class="header-upper">
-                <div class="inner-container clearfix">
+                <div class="inner-container custom-nav">
                     <!--Logo-->
                     <div class="logo-box">
                         <div class="logo"><a href="index.html" title="Origin Matters"><img
-                                    src="images/om-large-invert.png" class="main-logo"
-                                    alt="Origin Matters"
-                                    title="Origin Matters"><img src="images/om-large.png"
-                                    id="thm-logo" alt="Origin Matters"
-                                    title="Origin Matters" class="stricked-logo"></a></div>
+                                src="images/om-large-invert.png" class="main-logo"
+                                alt="Origin Matters"
+                                title="Origin Matters"><img src="images/om-large.png"
+                                id="thm-logo" alt="Origin Matters"
+                                title="Origin Matters" class="stricked-logo"></a></div>
                     </div>
                     <div class="nav-outer clearfix">
                         <!--Mobile Navigation Toggler-->
@@ -89,6 +141,35 @@
             </div>
             <!--End Header Upper-->
 
+            <!--Mobile Menu-->
+        <div class="side-menu__block">
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div><!-- /.side-menu__block-overlay -->
+            <div class="side-menu__block-inner ">
+                <div class="side-menu__top justify-content-end">
+
+                    <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="images/icons/close-1-1.png"
+                            alt=""></a>
+                </div><!-- /.side-menu__top -->
+
+
+                <nav class="mobile-nav__container">
+                    <!-- content is loading via js -->
+                </nav>
+                <!-- <div class="side-menu__sep"></div>
+                <div class="side-menu__content">
+                    <div class="side-menu__social">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div> -->
+            </div><!-- /.side-menu__block-inner -->
+        </div><!-- /.side-menu__block -->
+
 
         </header>
 
@@ -102,7 +183,7 @@
                         <div class="main-logo-box" style="margin-bottom: 5px !important;">
                             <img src="images/om-large-invert.png" alt="Origin Matters" class="large-centered-logo">
                         </div>
-                        <div class="intro-text" style="margin-top: -100px !important; max-width: 900px; margin: 0 auto; text-align: center;">
+                        <div class="intro-text" style="max-width: 900px; margin: 0 auto; text-align: center;">
                             <p class="lead" style="line-height: 1.4; margin-bottom: 40px; color: white; font-family: Jura-Regular;">
                                 Data will drive the new economy, but in the way the old economy grew because people trusted institutions like banks, the new digital economy will grow <i style="font-size: 1.2em; font-family: 'Jura', sans-serif; color: #00C3EF;"> only </i> if we <strong style="font-family: 'Jura', sans-serif; font-weight: bold; font-size: 1.2em; color: #00C3EF;">  trust</strong> data.
                             </p>                            
@@ -117,9 +198,6 @@
             </div>
         </section>
 
-
-
-        <!--Services Section-->
 <!--Services Section-->
 <section class="services-section-three" id="services" style="background-color: #222429;">
     <div class="auto-container">
@@ -131,24 +209,29 @@
             <div class="row clearfix justify-content-center">
                 <!--Service Block-->
                 <div class="service-block-two col-xl-5 col-lg-6 col-md-6 col-sm-12 ">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms" style="background-color: #222429;">
-                        <div class="bottom-curve"></div>
-                        <div class="icon-box"><span class="flaticon-monitor"></span></div>
-                        <h4 ><a href="#" style="font-family: Jura-Regular; color: white;"> OriginShare  <br> Next-Generation File Sharing</a></h4>
-                        <div class="text" style="color: white; font-family: Jura-Regular;">First filesystem secured by blockchain for when you want to share high-value data.</div>
-                        <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                    </div>
+                    <a href="origin_share.html" class="w-100 h-100">
+                        <div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms" style="background-color: #222429;">
+                            <div class="bottom-curve"></div>
+                            <div class="icon-box"><img src="images/svg/origin_share.svg" /></div>
+                            <h4 ><span href="#" style="font-family: Jura-Regular; color: white;"> OriginShare  <br> Next-Generation File Sharing</span></h4>
+                            <div class="text" style="color: white; font-family: Jura-Regular;">First filesystem secured by blockchain for when you want to share high-value data.</div>
+                            <div class="link-box"><a href="origin_share.html"><span class="fa fa-angle-right"></span></a></div>
+                        </div>
+                    </a>
+                    
                 </div>
 
                 <!--Service Block-->
                 <div class="service-block-two col-xl-5 col-lg-6 col-md-6 col-sm-12" >
-                    <div class="inner-box wow fadeInUp"  data-wow-delay="600ms" data-wow-duration="1500ms" style="background-color: #222429;">
-                        <div class="bottom-curve"></div>
-                        <div class="icon-box"><span class="flaticon-instant-camera"></span></div>
-                        <h4> <a style="font-family: Jura-Regular; color: white;">OriginVault<br> The Ultimate Virtual Data Room </a></h5>
-                        <div class="text" style="color: white; font-family: Jura-Regular;">Rigorous access control and accountability underpinned by immutable audits, boosting confidence, transparency and the value of your data</div>
-                        <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                    </div>
+                    <a href="origin_vault.html" class="w-100 h-100">
+                        <div class="inner-box wow fadeInUp"  data-wow-delay="600ms" data-wow-duration="1500ms" style="background-color: #222429;">
+                            <div class="bottom-curve"></div>
+                            <div class="icon-box"><img class="vault" src="images/svg/origin_vault.svg" /></div>
+                            <h4> <span style="font-family: Jura-Regular; color: white;">OriginVault<br> The Ultimate Virtual Data Room </span></h5>
+                            <div class="text" style="color: white; font-family: Jura-Regular;">Rigorous access control and accountability underpinned by immutable audits, boosting confidence, transparency and the value of your data</div>
+                            <div class="link-box"><a href="origin_vault.html"><span class="fa fa-angle-right"></span></a></div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -186,7 +269,7 @@
                                     <div class="feature">
                                         <div class="count" style="width: 50px; height: 50px; border-radius: 50%; background: #00C3EF; display: flex; align-items: center; justify-content: center;"><span style=" font-family: Jura-Regular; color: #000; font-size: larger;">03</span></div>
                                         <h5 style="color: white; font-family: Jura-Bold; margin-top: 10px; margin-bottom: 5px;">Afraid of misplaced Data </h5>
-                                        <div class="sub-text" style="color: white; font-family: Jura-Regular; margin-bottom: 40px;"> You’re afraid of revenue or repetitional loss from misplaced data
+                                        <div class="sub-text" style="color: white; font-family: Jura-Regular; margin-bottom: 40px;"> You’re afraid of revenue or reputational loss from misplaced data
                                             </div>
                                     </div>
                                 </div>
@@ -230,39 +313,39 @@
                                         <div class="row clearfix">
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                                 <div class="field-inner">
-                                                    <input type="text" name="username" value="" placeholder="Your Name"
-                                                        required="">
+                                                    <input type="text" name="username" value="" placeholder="Your Name" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                                 <div class="field-inner">
-                                                    <input type="email" name="email" value=""
-                                                        placeholder="Email Address" required="">
+                                                    <input type="email" name="email" value="" placeholder="Email Address" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                                 <div class="field-inner">
-                                                    <input type="text" name="phone" value="" placeholder="Phone Number"
-                                                        required="">
+                                                    <input type="text" name="phone" class="optional-field" value="" placeholder="Phone Number (Optional)">
                                                 </div>
                                             </div>
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                                 <div class="field-inner">
-                                                    <input type="text" name="subject" value="" placeholder="Subject"
-                                                        required="">
+                                                    <input type="text" name="subject" value="" placeholder="Subject" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
                                                 <div class="field-inner">
-                                                    <textarea name="message" placeholder="Write Message"
-                                                        required=""></textarea>
+                                                    <textarea name="message" placeholder="Write Message" required=""></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
-                                                <button class="theme-btn btn-style-one">
+                                                <button type="submit" class="theme-btn btn-style-one">
                                                     <i class="btn-curve"></i>
                                                     <span class="btn-title">Send message</span>
                                                 </button>
+                                            </div>
+                                            <div id="form-message" class="col-lg-12" style="display:none;">
+                                                <div class="alert">
+                                                    <p></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
@@ -323,6 +406,96 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/color-switcher.js"></script>
 
+    <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const messageDiv = document.getElementById('form-message');
+        const alert = messageDiv.querySelector('.alert');
+        const button = this.querySelector('button[type="submit"]');
+        
+        // Disable button and show loading state
+        button.disabled = true;
+        button.querySelector('.btn-title').textContent = 'Sending...';
+        
+        fetch('sendemail.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            messageDiv.style.display = 'block';
+            if (data.success) {
+                alert.className = 'alert alert-success';
+                alert.innerHTML = '<p>Thank you! Your message has been sent successfully.</p>';
+                this.reset(); // Reset form on success
+            } else {
+                alert.className = 'alert alert-danger';
+                alert.innerHTML = '<p>Sorry, there was an error sending your message. Please try again.</p>';
+            }
+        })
+        .catch(error => {
+            messageDiv.style.display = 'block';
+            alert.className = 'alert alert-danger';
+            alert.innerHTML = '<p>Sorry, there was an error sending your message. Please try again.</p>';
+        })
+        .finally(() => {
+            // Re-enable button and restore text
+            button.disabled = false;
+            button.querySelector('.btn-title').textContent = 'Send message';
+            
+            // Scroll to message
+            messageDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        $("#contact-form").validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                subject: {
+                    required: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                username: "Please enter your name",
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address"
+                },
+                subject: "Please enter a subject",
+                message: "Please enter your message"
+            },
+            // Completely ignore validation for optional fields
+            ignore: ".optional-field",
+            errorPlacement: function(error, element) {
+                if (!element.hasClass('optional-field')) {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    });
+    </script>
+
 </body>
 
 </html>
+</
+rewritten_file>
+
+
+
+
+```
